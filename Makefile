@@ -16,6 +16,7 @@ cas-sdk/cas-sdk.o: $(OBJECTS)
 	$(LD) $(LDFLAGS) $(addprefix $(BUILDDIR)/,$(notdir $(OBJECTS))) -o $@
 
 $(BUILDDIR)/%.o: %.c
+	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) $(LDFLAGS) -I$(SOURCEDIR) -I$(dir $<) -c $< -o $(BUILDDIR)/$(notdir $@)
 
 .PHONY: all
