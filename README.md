@@ -21,8 +21,8 @@ You will need to build gcc, binutils, and newlib for the sh target yourself. An 
 ### SDK
 To install the sdk, clone this repoand and run make.
 ```
-git clone INSERT URL HERE
-cd cas-sdk
+git clone https://github.com/diddyholz/CAS-SDK
+cd CAS-SDK
 make 
 ```
 After that define the "CAS_SDK" variable, pointing to the just created cas-sdk.o, in your shell.
