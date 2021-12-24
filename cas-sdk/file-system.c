@@ -23,7 +23,7 @@ int32_t (*fs_make_dir)(const char* path) = FATMAKEDIR_SR_ADDRESS;
 void (*fs_error_message)(int32_t error) = FUGUEGETERROR_SR_ADDRESS;
 
 // prepares file system access, needs to be called before you can open a file for the first time
-void file_init()
+void fs_init()
 {
 	char magicstring[10] = { 0, 'f', 0, 'l', 0, 's', 0, '0', 0, 0 };
 	((void (*)(char*))FATMAGICFUNC1_SR_ADDRESS)(magicstring);

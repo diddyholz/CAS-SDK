@@ -82,7 +82,7 @@ extern void (*fs_error_message)(int32_t error);
 /*! 
 	@brief A function that prepares file system access. Needs to be called at least once before trying to open/modify files.
 */
-void file_init();
+void fs_init();
 
 /*
 	A note on reading and writing to files:
